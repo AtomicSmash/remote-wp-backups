@@ -34,9 +34,7 @@ function cleanupBackups() {
 
     # Remove backups from backup server
     # find $6/* -mtime +2 -exec rm -rf {} \;
-    find $6/* -mtime +2
-
-
+    # find $6/* -mtime +2
 
 }
 
@@ -45,10 +43,10 @@ CURRENT_TIMESTAMP="`date +%d-%m-%Y_%H-%M`"
 CURRENT_DATE="`date +%d-%m-%Y`"
 
 
-# makeSQLBackup $1 $2 $3 $4 $5 $6
+makeSQLBackup $1 $2 $3 $4 $5 $6
 
-# makeFILEBackup $1 $2 $3 $4 $5 $6
+makeFILEBackup $1 $2 $3 $4 $5 $6
 
-# grabBackups $1 $2 $3 $4 $5 $6
+grabBackups $1 $2 $3 $4 $5 $6
 
-cleanupBackups $1 $2 $3 $4 $5 $6
+# cleanupBackups $1 $2 $3 $4 $5 $6

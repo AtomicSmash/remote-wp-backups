@@ -6,7 +6,12 @@ This script is for backing up a live Wordpress website from a remote server. It 
 2. SSH access to both servers
 3. Ability to be able to create a 'wp-backup' user on both servers
 
+```
 sudo adduser wp-backup
+su wp-backup
+git clone https://github.com/AtomicSmash/remote-wp-backups.git remote-wp-backups
+mkdir ~/backups
+```
 
 ### How it works
 
