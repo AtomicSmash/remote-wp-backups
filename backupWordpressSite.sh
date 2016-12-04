@@ -24,6 +24,8 @@ function grabBackups() {
 
 function cleanupBackups() {
 
+    echo "------- CLEANING UP BACKUPS FOR $1 -------";
+
     # find ~/Music/* -mtime +5 -exec ls \;
 
 

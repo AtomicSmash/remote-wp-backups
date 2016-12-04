@@ -13,7 +13,7 @@ This script is for backing up a live Wordpress websites from a remote server. It
 
 ### How it works
 
-The script (on your backup server) will SSH into your live server zip
+The script (on your backup server) will SSH into your live server and zip up image and take a backup of the current database.
 
 [image of server layout]
 
@@ -25,8 +25,8 @@ setup crontab with:
 
 1. Add new 'wp-backup'
 1. Switch to new user
-1. Clone this project
-1. Make a backups folder (we recommend the home directory of the 'wp-backup' user)
+1. Clone this project to the home directory of 'wp-backup'
+1. Make a 'backups' folder, also in the home directory of the 'wp-backup' user
 
 All this can be achieved by running these commands:
 
