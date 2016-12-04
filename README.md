@@ -37,7 +37,7 @@ All this can be achieved by running these commands
 ### Starting backups
 
 ```
-0 * * * * ~/backup.sh &> /dev/null
+0 * * * * ~/remote-wp-backups/backupWordpressSite.sh &> /dev/null
 ```
 
 ## Notes
@@ -45,3 +45,6 @@ This script is Wordpress related but could easily be made CMS agnostic by removi
 
 ## Disclaimer
 Even though we use this script on an daily across multiple servers by multiple users, we do enforce that you use this script at your own risk and we **are not responsible** for any detrimental effects that might occur from using. If you are unsure about what the script actually does or how it works, please do not use it without reviewing throughly.
+
+##Thanks
+Slack integration taken from https://gist.github.com/dopiaza/6449505

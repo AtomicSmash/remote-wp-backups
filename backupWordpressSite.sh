@@ -40,6 +40,39 @@ function cleanupBackups() {
 
 }
 
+# Usage: slackpost "<webhook_url>" "<channel>" "<message>"
+
+# webhook_url=$1
+# if [[ $webhook_url == "" ]]
+# then
+#         echo "No webhook_url specified"
+#         exit 1
+# fi
+# 
+# shift
+# channel=$1
+# if [[ $channel == "" ]]
+# then
+#         echo "No channel specified"
+#         exit 1
+# fi
+#
+# shift
+#
+# text=$*
+#
+# if [[ $text == "" ]]
+# then
+#         echo "No text specified"
+#         exit 1
+# fi
+#
+# escapedText=$(echo $text | sed 's/"/\"/g' | sed "s/'/\'/g" )
+# json="{\"channel\": \"$channel\", \"username\":\"backups\", \"text\": \"$escapedText\"}"
+#
+# curl -s -d "payload=$json" "$webhook_url"
+
+
 # Set variables
 CURRENT_TIMESTAMP="`date +%d-%m-%Y_%H-%M`"
 CURRENT_DATE="`date +%d-%m-%Y`"
