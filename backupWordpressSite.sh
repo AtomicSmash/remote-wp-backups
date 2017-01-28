@@ -18,22 +18,20 @@ function makeFILEBackup() {
 function grabBackups() {
     echo "> SYNCING BACKUPS FOR $1";
     # Get files onto backup server
-    rsync -e "ssh -p $4" -r --size-only $2@$3:$7/* $7/$1
+    rsync -e "ssh -p $4" -r --size-only $2@$3:$7/* $8/$1
     echo ">> COMPLETE SYNCING BACKUPS FOR $1";
 }
 
 function cleanupBackups() {
-
     echo "> CLEANING UP REMOTE BACKUPS FOR $1";
-    # ssh $2@$3 -p $4 "find /home/$2/$7/* -mtime +2";
-    ssh $2@$3 -p $4 "find $7/* -mtime +2 -exec rm -rf {} \;";
-
+    # ssh $2@$3 -p $4 "find $7/* -mtime +2";
+    # ssh $2@$3 -p $4 "find $7/* -mtime +2 -exec rm -rf {} \;";
 
     echo "> CLEANING UP LOCAL BACKUPS";
-    # find $7/* -mtime +7
-    find $7/* -mtime +7 -exec rm -rf {} \;
-
+    # find $8/* -mtime +7
+    # find $8/* -mtime +7 -exec rm -rf {} \;
 }
+
 
 # Usage: slackpost "<webhook_url>" "<channel>" "<message>"
 

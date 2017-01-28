@@ -44,6 +44,7 @@ The 4 paramters passed into backupWordpressSite.sh are:
 1. Remote - port
 1. Remote - Wordpress directory
 1. Remote - Wordpress uploads directory
+1. Remote - Backup directory
 1. Local - Backup directory
 
 ```
