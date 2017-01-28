@@ -25,11 +25,11 @@ function grabBackups() {
 function cleanupBackups() {
     echo "> CLEANING UP REMOTE BACKUPS FOR $1";
     # ssh $2@$3 -p $4 "find $7/* -mtime +2";
-    # ssh $2@$3 -p $4 "find $7/* -mtime +2 -exec rm -rf {} \;";
+    ssh $2@$3 -p $4 "find $7/* -mtime +2 -exec rm -rf {} \;";
 
     echo "> CLEANING UP LOCAL BACKUPS";
     # find $8/* -mtime +7
-    # find $8/* -mtime +7 -exec rm -rf {} \;
+    find $8/$1/* -mtime +7 -exec rm -rf {} \;
 }
 
 
