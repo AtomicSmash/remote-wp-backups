@@ -71,10 +71,10 @@ CURRENT_TIMESTAMP="`date +%d-%m-%Y_%H-%M`"
 CURRENT_DATE="`date +%d-%m-%Y`"
 
 
-makeSQLBackup $1 $2 $3 $4 $5 $6 $7
+makeSQLBackup $1 $2 $3 $4 $5 $6 $7 $8
 
-makeFILEBackup $1 $2 $3 $4 $5 $6 $7
+makeFILEBackup $1 $2 $3 $4 $5 $6 $7 $8
 
-grabBackups $1 $2 $3 $4 $5 $6 $7
+grabBackups $1 $2 $3 $4 $5 $6 $7 $8
 
-cleanupBackups $1 $2 $3 $4 $5 $6 $7
+cleanupBackups $1 $2 $3 $4 $5 $6 $7 $8
