@@ -4,7 +4,7 @@ function makeSQLBackup() {
     echo "> BACKING UP $1 LIVE DB";
     # Create backup folder and export db
     ssh $2@$3 -p $4 "mkdir -p $7/sql && wp db export - --path=$5 --allow-root | gzip > $7/sql/$1-$CURRENT_TIMESTAMP.sql.gz";
-    echo ">>COMPLETED BACKING UP $1 LIVE DB";
+    echo ">> COMPLETED BACKING UP $1 LIVE DB";
     # echo "------- BACKING UP $1 TO BACKUP SERVER-------";
 }
 
@@ -26,7 +26,7 @@ function cleanupBackups() {
 
     echo "> CLEANING UP REMOTE BACKUPS FOR $1";
     # ssh $2@$3 -p $4 "find /home/$2/$7/* -mtime +2";
-    ssh $2@$3 -p $4 "find /home/$2/$7/* -mtime +2 -exec rm -rf {} \;";
+    ssh $2@$3 -p $4 "find $7/* -mtime +2 -exec rm -rf {} \;";
 
 
     echo "> CLEANING UP LOCAL BACKUPS";

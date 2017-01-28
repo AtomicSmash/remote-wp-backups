@@ -50,6 +50,8 @@ The 4 paramters passed into backupWordpressSite.sh are:
 0 2 * * * ~/remote-wp-backups/backupWordpressSite.sh SITENAME USERNAME ADDRESS PORT WP-DIR UPLOADS-DIR LOCAL-DIR &> /dev/null
 ```
 
+
+
 ## Notes
 This script is Wordpress focussed but could easily be made CMS agnostic by removing the wp-cli commands for grabbing the live database.
 
